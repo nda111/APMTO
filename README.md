@@ -30,7 +30,7 @@ Please follow the instruction of [ffmpeg-python](https://github.com/kkroening/ff
 <!-- ### Via Anaconda3
 
 ```bash
-pip install git+https://github.com/nda111/APMTO.git
+conda install apmto
 ``` -->
 
 ### Via PyPI
@@ -38,7 +38,7 @@ pip install git+https://github.com/nda111/APMTO.git
 You can install the lastest `apmto` package using the following command:
 
 ```bash
-conda install apmto
+pip install apmto
 ```
 
 or you can install from this GitHub repository.
