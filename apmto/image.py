@@ -5,10 +5,10 @@ from pillow_heif import register_heif_opener
 
 register_heif_opener() 
 
-VALID_IMAGE_FORMATS = ['jpg', 'png']
+VALID_IMAGE_FORMATS = ['jpg', 'jpeg', 'png']
 
 
-def convert_heif(filename, format: Literal['jpg', 'png']):
+def convert_heif(filename, format: Literal['jpg', 'jpeg', 'png']):
     assert format.lower() in VALID_IMAGE_FORMATS
     
     splits = filename.split('.')
