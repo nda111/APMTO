@@ -7,7 +7,7 @@ with open('requirements.txt', 'r') as fh:
     
 setuptools.setup(
     name="apmto", 
-    version="0.0.1",
+    version="1.0.0",
     author="Geunhyeok Yu",
     author_email="geunhyeok0111@gmail.com",
     description="Simple python package wrapper for converting apple media formatted files into high-compatible formats.",
