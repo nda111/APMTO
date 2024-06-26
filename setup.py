@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="apmto-nda111", 
+    name="apmto", 
     version="0.0.1",
     author="Geunhyeok Yu",
     author_email="geunhyeok0111@gmail.com",
