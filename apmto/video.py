@@ -1,31 +1,9 @@
 import sys
 from typing import Literal
-from PIL import Image
-from pillow_heif import register_heif_opener
+
 import ffmpeg
 
-
-register_heif_opener() 
-
-VALID_IMAGE_FORMATS = ['jpg', 'png']
 VALID_VIDEO_FORMATS = ['mp4', 'mkv']
-
-
-def convert_heif(filename, format: Literal['jpg', 'png']):
-    assert format.lower() in VALID_IMAGE_FORMATS
-    
-    splits = filename.split('.')
-    tar = '.'.join(splits[:-1]) + '.' + format.upper()
-    img = Image.open(filename)
-    img.convert('RGB').save(tar)
-
-
-def heif_to_jpg(filename):
-    convert_heif(filename, format='jpg')
-    
-    
-def heif_to_png(filename):
-    convert_heif(filename, format='png')
     
     
 def __get_bitrates(input_file):
@@ -46,7 +24,7 @@ def __get_bitrates(input_file):
     except ffmpeg.Error as e:
         print(f"An error occurred: {e.stderr}")
         return None, None
-    
+
     
 def convert_mov(filename, format: Literal['mp4', 'mkv'], verbose=False, option=dict()):
     assert format.lower() in VALID_VIDEO_FORMATS
